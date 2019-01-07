@@ -1,0 +1,27 @@
+#include <vector>
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	vector<vector<int> > matice(3); //Matice 3 x 0
+	/*Mezera mezi > a > je důležitá!
+          Viz moje předchozí články o šablonách. */
+	for(int a = 0; a < 3; a++)
+	{
+		matice[a].push_back(a+1);
+		matice[a].push_back(a+2);
+		matice[a].push_back(a+3);
+	}
+	/* Nyní máme matici 3 x 3 */
+	for(int y = 0; y < 3; y++)
+	{
+		for(int x = 0; x < 3; x++)
+		{
+			cout << matice[x][y] << '\t';
+		}
+		cout << endl;
+	}
+	return 0;	
+}
